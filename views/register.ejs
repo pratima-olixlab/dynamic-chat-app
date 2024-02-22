@@ -1,0 +1,86 @@
+<!-- register.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <title>Register</title>
+</head>
+
+<body>
+  <form action="" method="POST" enctype="multipart/form-data">
+    <h1>Register</h1>
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <br><br>
+    <input type="file" name="image" required>
+    <br><br>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <br><br>
+    <input type="submit" value="Register">
+    <br><br>
+    <a style="text-decoration: none; color: #333;">Already have an account?
+      <a href="/login">Login</a>
+    </a>
+  </form>
+
+  <%
+  if (typeof message !== 'undefined') {
+    %>
+    <p><%= message %></p>
+    <%
+  }
+  %>
+</body>
+
+</html>
