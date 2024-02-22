@@ -1,10 +1,9 @@
 {
-   "version": 2,
-   "name": "dynamic-chat-app",
-   "builds": [
-      { "src": "app.js", "use": "@vercel/node" }
-   ],
-   "routes": [
-      { "src": "/(.*)", "dest": "/app.js" }
-   ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "vercel-sapper"
+    }
+  ]
 }
