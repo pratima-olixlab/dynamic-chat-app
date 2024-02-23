@@ -49,6 +49,7 @@ usp.on('connection',async function(socket){
     })
 });
 
-http.listen(3000, function(){
-    console.log('Server is running');
+const port = process.env.PORT || 3000;
+http.listen(port, function(){
+    console.log(`Server is running on port ${port}`);
 });
