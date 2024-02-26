@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const user_route = express();
 
@@ -5,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const session = require('express-session');
 user_route.use(session({
-    secret: "thisismysessionsecret",
+    secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true
 }));
