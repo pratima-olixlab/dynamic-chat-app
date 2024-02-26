@@ -63,7 +63,7 @@ const login = async (req, res) =>{
 
 const logout = async (req, res) =>{
     try{
-        req.session.destroy();
+        req.session=null;
         res.redirect('/');
     } catch (error) {
         console.log(error.message);
