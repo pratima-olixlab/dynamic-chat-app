@@ -4,7 +4,7 @@ const user_route = express();
 
 const bodyParser = require('body-parser');
 
-const session = require('express-session');
+const session = require('cookie-session');
 user_route.use(session({
     secret: process.env.SESSION_SECRET,
     resave: true,
