@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "app.js",
-      "use": "@vercel/node",
-      "root": "views"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -12,5 +11,8 @@
       "src": "/(.*)",
       "dest": "/app.js"
     }
-  ]
+  ],
+  "config": {
+    "root": "./views"
+  }
 }
